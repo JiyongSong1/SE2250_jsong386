@@ -15,6 +15,7 @@ public class DamageEnemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {        
+        
         if(counter>= 3)
         {            
             // Change the 'color' property of the 'Sprite Renderer'
@@ -29,6 +30,12 @@ public class DamageEnemy : MonoBehaviour
         {
             Destroy (other.gameObject);
             counter++;
+        }
+
+        if(other.gameObject.tag == "Arrow")
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
         }
     }
 }

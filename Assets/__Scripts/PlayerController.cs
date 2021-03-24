@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastMove;
     protected Rigidbody2D myRigidbody;
 
+    public GameObject arrowPrefab;
+
     void Awake()
     {
         //Singleton
@@ -67,5 +69,11 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("PlayerMoving", playerMoving);
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));
+            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2 (5.0f,0f);
+        }
     }
 }
