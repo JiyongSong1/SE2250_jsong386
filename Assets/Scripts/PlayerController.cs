@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 lastMove;
     private Rigidbody2D myRigidbody;
 
+
     void Awake()
     {
         if (S == null)
@@ -36,6 +37,7 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         playerMoving = false;
+
 
         if (Input.GetAxisRaw("Horizontal") > 0.5f ||Input.GetAxisRaw("Horizontal") < -0.5f)
         {

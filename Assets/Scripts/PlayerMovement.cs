@@ -2,20 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : PlayerController
 {
     public float dashDistance = 15f;
     bool isDashing;
     float doubleTapTime;
 
-    //private Rigidbody2D myRigidbody; in player controller
-    private Rigidbody2D rb;
+    //private Rigidbody2D myRigidbody; in player controlle
     KeyCode lastKeyCode;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+
 
     // Update is called once per frame
     void Update()
@@ -45,8 +40,8 @@ public class PlayerMovement : MonoBehaviour
     }
     IEnumerator Dash (float direction) {
         isDashing = true;
-        rb.velocity = new Vector2(rb.velocity.x, 0f);
-        rb.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
+        myRigidbody.velocity = new Vector2(myRigidbody.velocity.x, 0f);
+        myRigidbody.AddForce(new Vector2(dashDistance * direction, 0f), ForceMode2D.Impulse);
         yield return new WaitForSeconds(0.4f);
         isDashing = false;
     }
