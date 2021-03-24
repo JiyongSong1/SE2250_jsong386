@@ -16,14 +16,12 @@ public class SlimeController : MonoBehaviour
     public float reloadWait;
     private bool reloading;
     private GameObject player;
+    public int damage;
 
     void Start()
     {
-        myRigidbody = GetComponent<Rigidbody2D>();
+        myRigidbody = GetComponent<Rigidbody2D>();        
         
-        //timeBetweenMoveCounter = timeBetweenMove;
-        //moveTimeCounter = moveTime;
-
         timeBetweenMoveCounter = Random.Range(timeBetweenMove*0.75f, timeBetweenMove*1.5f);
         moveTimeCounter = Random.Range(moveTime*0.75f, timeBetweenMove*1.5f);
     }
@@ -39,7 +37,6 @@ public class SlimeController : MonoBehaviour
             if (moveTimeCounter < 0f)
             {
                 moving = false;
-                //timeBetweenMoveCounter = timeBetweenMove;
                 timeBetweenMoveCounter = Random.Range(timeBetweenMove*0.75f, timeBetweenMove*1.5f);
             }
         }
@@ -51,13 +48,13 @@ public class SlimeController : MonoBehaviour
             if(timeBetweenMoveCounter < 0f)
             {
                 moving = true;
-                //moveTimeCounter = moveTime;
                 moveTimeCounter = Random.Range(moveTime*0.75f, timeBetweenMove*1.5f);
                 //move slime randomly
                 moveDirection = new Vector3 (Random.Range (-1f, 1f)*moveSpeed, Random.Range (-1f, 1f)*moveSpeed, 0f);
             }
         }
 
+        //if player dies, reload the scene after a delay
         if(reloading)
         {
             reloadWait -= Time.deltaTime;
@@ -71,11 +68,11 @@ public class SlimeController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
+        //player is not active anymore after getting hit
+        
         if(other.gameObject.name == "Player")
         {
-            other.gameObject.SetActive(false);
-            reloading = true;
-            player = other.gameObject;
+            other.gameObject.GetComponent<PlayerHealthManager>().damagePlayer(damage);
         }
     }
 }
