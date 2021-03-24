@@ -17,6 +17,11 @@ public class PlayerHealthManager : MonoBehaviour
     //if the player's health is below 0, the player will be deleted
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.C))
+        {            
+            setHealth();
+        }
+
         if(playerCurrentHp <= 0)
         {
             gameObject.SetActive(false);
