@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 105435656}
   - component: {fileID: 105435655}
   m_Layer: 0
-  m_Name: slime_red (4)
+  m_Name: slime_red_4
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9558,7 +9558,7 @@ GameObject:
   - component: {fileID: 1133062626}
   - component: {fileID: 1133062625}
   m_Layer: 0
-  m_Name: slime_red (2)
+  m_Name: slime_red_2
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11903,7 +11903,7 @@ GameObject:
   - component: {fileID: 1425633632}
   - component: {fileID: 1425633631}
   m_Layer: 0
-  m_Name: slime_red (3)
+  m_Name: slime_red_3
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -20324,7 +20324,7 @@ GameObject:
   - component: {fileID: 2055138240}
   - component: {fileID: 2055138239}
   m_Layer: 0
-  m_Name: slime_red (1)
+  m_Name: slime_red_1
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
