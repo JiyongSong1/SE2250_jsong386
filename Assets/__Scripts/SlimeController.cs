@@ -16,6 +16,7 @@ public class SlimeController : MonoBehaviour
     public float reloadWait;
     private bool reloading;
     private GameObject player;
+    public int damage;
 
     void Start()
     {
@@ -68,11 +69,10 @@ public class SlimeController : MonoBehaviour
     void OnCollisionEnter2D(Collision2D other)
     {
         //player is not active anymore after getting hit
+        
         if(other.gameObject.name == "Player")
         {
-            other.gameObject.SetActive(false);
-            reloading = true;
-            player = other.gameObject;
+            other.gameObject.GetComponent<PlayerHealthManager>().damagePlayer(damage);
         }
     }
 }
