@@ -13,7 +13,6 @@ public class PlayerController : MonoBehaviour
 
     private Vector2 lastMove;
     protected Rigidbody2D myRigidbody;
-
     public GameObject arrowPrefab;
 
     void Awake()

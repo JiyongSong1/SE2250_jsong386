@@ -68,7 +68,7 @@ public class SlimeController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        //player gets damaged after being hit
+        //player is not active anymore after getting hit
         
         if(other.gameObject.name == "Player")
         {
