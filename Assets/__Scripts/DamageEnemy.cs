@@ -18,6 +18,7 @@ public class DamageEnemy : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D other)
     {
+        //Enemy is destroyed if hit by a weapon
         if(other.gameObject.tag == "Enemy")
         {
             Destroy (other.gameObject);
