@@ -19,7 +19,7 @@ public class PlayerHealthManager : MonoBehaviour
     {
         if(playerCurrentHp < 0)
         {
-            gameObject.setActive(false);
+            gameObject.SetActive(false);
 
         }
     }
