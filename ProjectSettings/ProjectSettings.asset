@@ -619,6 +619,7 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
+    Collab: 1
     UNet: 1
   luminIcon:
     m_Name: 
@@ -632,10 +633,10 @@ PlayerSettings:
     m_VersionCode: 1
     m_VersionName: 
   apiCompatibilityLevel: 6
-  cloudProjectId: 
+  cloudProjectId: ee094da9-53dc-4980-a27e-f7be89d8d924
   framebufferDepthMemorylessMode: 0
-  projectName: 
-  organizationId: 
+  projectName: Sprite
+  organizationId: andrewlou
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
