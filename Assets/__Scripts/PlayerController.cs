@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
     private bool playerMoving;
 
     private Vector2 lastMove;
-    private Rigidbody2D myRigidbody;
+    protected Rigidbody2D myRigidbody;
 
     void Awake()
     {
