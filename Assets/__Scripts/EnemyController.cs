@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlimeController : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
     public float moveSpeed;
     private Rigidbody2D myRigidbody;
