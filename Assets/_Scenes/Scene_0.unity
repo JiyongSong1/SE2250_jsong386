@@ -906,7 +906,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 127, y: -60}
+  m_AnchoredPosition: {x: 100, y: -33}
   m_SizeDelta: {x: 120, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1264530311
@@ -1537,6 +1537,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
+  countText: {fileID: 0}
   target: {fileID: 0}
   moveSpeed: 5
   arrowPrefab: {fileID: 230770129320259596, guid: efaaac460c7c4c147833028593b8c826,
@@ -1621,6 +1622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   count: 0
+  countText: {fileID: 0}
   target: {fileID: 0}
   moveSpeed: 0
   arrowPrefab: {fileID: 0}
