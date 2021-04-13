@@ -15,6 +15,10 @@ public class PlayerController : Arrow
     protected Rigidbody2D myRigidbody;
     public GameObject arrowPrefab;
 
+    private static bool playerExists;
+
+    public string startPoint;
+
     void Awake()
     {
         //Singleton
@@ -32,6 +36,18 @@ public class PlayerController : Arrow
     {
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
+
+        if(!playerExists)
+        {
+            playerExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        
     }
 
     // Update is called once per frame

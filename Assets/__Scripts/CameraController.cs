@@ -17,6 +17,8 @@ public class CameraController : MonoBehaviour
     private Vector3 targetPos;
     public float moveSpeed;
 
+    private static bool cameraExists;
+
     void Start()
     {
 
@@ -25,6 +27,19 @@ public class CameraController : MonoBehaviour
 
         halfHeight = theCamera.orthographicSize;
         halfWidth = halfHeight * Screen.width / Screen.height;
+
+        DontDestroyOnLoad(transform.gameObject);
+
+        if (!cameraExists)
+        {
+            cameraExists = true;
+            DontDestroyOnLoad(transform.gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
 
     void FixedUpdate()
