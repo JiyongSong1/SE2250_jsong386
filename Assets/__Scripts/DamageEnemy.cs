@@ -22,17 +22,17 @@ public class DamageEnemy : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D (Collider2D other)
+    void OnTriggerEnter2D (Collider2D col)
     {
         //Enemy is destroyed if hit by a weapon
-        if(other.gameObject.tag == "Enemy")
+        if(col.gameObject.tag == "Enemy")
         {
-            Destroy (other.gameObject);
+            Destroy (col.gameObject);
             counter++;
         }
-        if (other.gameObject.tag == "Mage")
+        if (col.gameObject.tag == "Mage")
         {
-            Destroy (other.gameObject);
+            Destroy (col.gameObject);
             counter = counter + 2;
         }
     }
