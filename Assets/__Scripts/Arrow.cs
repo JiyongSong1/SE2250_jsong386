@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
+    private int count;
 
     public GameObject target;
     // Start is called before the first frame update
@@ -18,6 +19,14 @@ public class Arrow : MonoBehaviour
         {
             Destroy (col.gameObject);
             Destroy (gameObject);
+            count++;
+        }
+
+        if (col.gameObject.tag == "Mage")
+        {
+            Destroy (col.gameObject);
+            Destroy (gameObject);
+            count = count + 2;
         }
     }
 }

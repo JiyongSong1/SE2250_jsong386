@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : Arrow
 {
     static public PlayerController S;
     public float moveSpeed;
@@ -78,6 +78,14 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
 
-        
+        if(count > 5)
+        {
+
+        }
+
+        if(count > 10)
+        {
+            
+        }
     }
 }
