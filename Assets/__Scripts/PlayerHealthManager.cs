@@ -14,8 +14,7 @@ public class PlayerHealthManager : MonoBehaviour
     void Start()
     {
         playerCurrentHp = playerMaxHp;
-        healthBar.SetMaxHealth(playerMaxHp);
-        
+        healthBar.SetMaxHealth(playerMaxHp);        
     }
 
     //if the player's health is below 0, the player will be deleted

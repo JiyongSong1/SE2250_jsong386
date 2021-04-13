@@ -18,7 +18,7 @@ public class PlayerController : Arrow
     private static bool playerExists;
 
     public string startPoint;
-
+    
     void Awake()
     {
         //Singleton
