@@ -45,6 +45,12 @@ public class PlayerController : MonoBehaviour
             myRigidbody.velocity = new Vector2(Input.GetAxisRaw("Horizontal") * moveSpeed, myRigidbody.velocity.y);
             playerMoving = true;
             lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
+
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+            GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));
+            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2 (Input.GetAxisRaw("Horizontal")*7f ,0f);
+            }
         }
         if (Input.GetAxisRaw("Vertical") > 0.5f ||Input.GetAxisRaw("Vertical") < -0.5f)
         {
@@ -69,10 +75,6 @@ public class PlayerController : MonoBehaviour
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
 
-        if(Input.GetKeyDown(KeyCode.Space))
-        {
-            GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));
-            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2 (5.0f,0f);
-        }
+        
     }
 }
