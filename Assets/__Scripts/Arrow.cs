@@ -1,15 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Arrow : MonoBehaviour
 {
     public int count;
 
+    public Text countText;
+
     public GameObject target;
     // Start is called before the first frame update
     void Start()
     {
+        count = 0;
+        countText.text = "Count: " + count.ToString();
         //changed animations
     }
 
@@ -20,6 +25,7 @@ public class Arrow : MonoBehaviour
             Destroy (col.gameObject);
             Destroy (gameObject);
             count++;
+            setCountText();
         }
 
         if (col.gameObject.tag == "Mage")
@@ -27,6 +33,12 @@ public class Arrow : MonoBehaviour
             Destroy (col.gameObject);
             Destroy (gameObject);
             count = count + 2;
+            setCountText();
         }
+    }
+
+    void setCountText()
+    {
+        countText.text = "Count: " + count.ToString();
     }
 }
