@@ -30,5 +30,10 @@ public class DamageEnemy : MonoBehaviour
             Destroy (other.gameObject);
             counter++;
         }
+        if (other.gameObject.tag == "Mage")
+        {
+            Destroy (other.gameObject);
+            counter = counter + 2;
+        }
     }
 }

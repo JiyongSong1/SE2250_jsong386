@@ -68,7 +68,7 @@ public class EnemyController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D other)
     {
-        //player is not active anymore after getting hit
+        //player is damaged after getting hit
         
         if(other.gameObject.name == "Player")
         {
