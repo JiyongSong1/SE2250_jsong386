@@ -794,7 +794,7 @@ Canvas:
   m_GameObject: {fileID: 1100770243}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 519420031}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
@@ -921,10 +921,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af235081dd47342408e70d00081ac9e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHp: 0
-  playerCurrentHp: 0
-  healthBar: {fileID: 0}
-  slider: {fileID: 0}
+  playerMaxHp: 50
+  playerCurrentHp: 50
+  healthBar: {fileID: 1264530311}
+  slider: {fileID: 1264530312}
 --- !u!114 &1264530312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1643,7 +1643,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMaxHp: 50
   playerCurrentHp: 0
-  healthBar: {fileID: 0}
+  healthBar: {fileID: 1264530311}
 --- !u!114 &2019899930
 MonoBehaviour:
   m_ObjectHideFlags: 0
