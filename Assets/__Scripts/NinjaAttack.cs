@@ -21,6 +21,7 @@ public class NinjaAttack : MonoBehaviour
         CheckTimeForFire();
     }
     
+    //shoot fireballs at player depending on the fire rate
     void CheckTimeForFire()
     {
         if (Time.time > nextFire){

@@ -13,10 +13,12 @@ public class FireBall : MonoBehaviour
     void Start()
     {
         rigidbody = GetComponent<Rigidbody2D>();
+        //fireball automatically targets the player
         target = GameObject.Find("Player");
         moveDirection = (target.transform.position - transform.position).normalized * moveSpeed;
         rigidbody.velocity = new Vector2(moveDirection.x, moveDirection.y);
-        Destroy(gameObject, 3f);
+        //destroy fireball object after 5 seconds
+        Destroy(gameObject, 5f);
     }
 
     // Update is called once per frame

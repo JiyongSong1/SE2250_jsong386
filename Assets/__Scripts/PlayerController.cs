@@ -46,10 +46,12 @@ public class PlayerController : MonoBehaviour
             playerMoving = true;
             lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
+            //press space to shoot arrows
             if(Input.GetKeyDown(KeyCode.Space))
             {
             GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));
             arrow.GetComponent<Rigidbody2D>().velocity = new Vector2 (Input.GetAxisRaw("Horizontal")*7f ,0f);
+            //destroy arrow after 7 seconds automatically
             Destroy (arrow, 7.0f);
             }
         }
