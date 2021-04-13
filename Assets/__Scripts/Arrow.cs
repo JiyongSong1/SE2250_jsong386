@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Arrow : MonoBehaviour
 {
-    private int count;
+    public int count;
 
     public GameObject target;
     // Start is called before the first frame update
