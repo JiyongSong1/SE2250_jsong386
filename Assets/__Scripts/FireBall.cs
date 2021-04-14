@@ -1,12 +1,13 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class FireBall : MonoBehaviour
 {
-    float moveSpeed = 3f;
+    float moveSpeed = 5f;
     Rigidbody2D rigidbody;
 
+    public int damage;
     public GameObject target;
     Vector2 moveDirection;
     // Start is called before the first frame update
@@ -31,6 +32,7 @@ public class FireBall : MonoBehaviour
     {
         if (col.gameObject.name.Equals("Player"))
         {
+            col.gameObject.GetComponent<PlayerHealthManager>().damagePlayer(damage);
             Destroy (gameObject);
         }
     }
