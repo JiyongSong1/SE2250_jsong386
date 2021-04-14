@@ -23,7 +23,6 @@ public class Arrow : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             Destroy (col.gameObject);
-            Destroy (gameObject);
             count++;
             setCountText();
         }
