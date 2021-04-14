@@ -364,7 +364,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.098039225, g: 0.6313726, b: 0.37254903, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1532,7 +1532,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2019899921}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 21.49, y: 17.64, z: 0}
+  m_LocalPosition: {x: 21.6, y: 18.65, z: 0}
   m_LocalScale: {x: 6.3, y: 6.3, z: 1}
   m_Children:
   - {fileID: 850047633}
@@ -1758,6 +1758,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670723972724146525, guid: 5704bc039eff5664c8e04e556b9c59bb,
+        type: 3}
+      propertyPath: m_SortingLayer
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670723972724146525, guid: 5704bc039eff5664c8e04e556b9c59bb,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3670723972724146525, guid: 5704bc039eff5664c8e04e556b9c59bb,
+        type: 3}
+      propertyPath: m_SortingLayerID
+      value: -1465067871
       objectReference: {fileID: 0}
     - target: {fileID: 4421642394688990130, guid: 5704bc039eff5664c8e04e556b9c59bb,
         type: 3}
