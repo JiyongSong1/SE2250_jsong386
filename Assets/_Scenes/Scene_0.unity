@@ -190,7 +190,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Count Text
+  m_Text: 'Count:
 
 '
 --- !u!222 &25899345
@@ -1625,7 +1625,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e64e2658188aae141931ba4044461a1a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  countText: {fileID: 0}
+  countText: {fileID: 25899344}
   target: {fileID: 0}
 --- !u!1 &2019899921
 GameObject:
@@ -1734,6 +1734,8 @@ MonoBehaviour:
   countText: {fileID: 0}
   target: {fileID: 0}
   moveSpeed: 5
+  arrowVelocity: 7
+  arrow1: {fileID: 0}
   arrowPrefab: {fileID: 230770129320259596, guid: efaaac460c7c4c147833028593b8c826,
     type: 3}
   startPoint: 
@@ -1818,6 +1820,8 @@ MonoBehaviour:
   countText: {fileID: 25899344}
   target: {fileID: 0}
   moveSpeed: 0
+  arrowVelocity: 7
+  arrow1: {fileID: 0}
   arrowPrefab: {fileID: 0}
   startPoint: 
   dashSpeed: 30
