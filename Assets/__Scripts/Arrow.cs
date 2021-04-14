@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Arrow : MonoBehaviour
 {
-    public int count;
+    public static int count;
 
     public Text countText;
 
