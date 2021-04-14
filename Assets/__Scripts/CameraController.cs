@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-
+    //Initilizing private and public fields
     public BoxCollider2D boundBox;
     private Vector3 minBounds;
     private Vector3 maxBounds;
@@ -19,6 +19,7 @@ public class CameraController : MonoBehaviour
 
     private static bool cameraExists;
 
+    //Ensures that camera is locked onto the player
     void Start()
     {
 
@@ -43,6 +44,7 @@ public class CameraController : MonoBehaviour
 
     }
 
+    //Makes sure that camera follows player
     void FixedUpdate()
     {
         //camera follows Player
@@ -55,6 +57,7 @@ public class CameraController : MonoBehaviour
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
+    //Sets the bounds 
     public void SetBounds(BoxCollider2D newBounds)
     {
         boundBox = newBounds;
