@@ -18,7 +18,7 @@ public class PlayerController : Arrow
     private static bool playerExists;
 
     public string startPoint;
-
+    
     void Awake()
     {
         //Singleton
@@ -63,12 +63,12 @@ public class PlayerController : Arrow
             lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
             //press space to shoot arrows
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.Z))
             {
             GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));
             arrow.GetComponent<Rigidbody2D>().velocity = new Vector2 (Input.GetAxisRaw("Horizontal")*7f ,0f);
-            //destroy arrow after 7 seconds automatically
-            Destroy (arrow, 7.0f);
+            //destroy arrow after 4 seconds automatically
+            Destroy (arrow, 4.0f);
             }
         }
         if (Input.GetAxisRaw("Vertical") > 0.5f ||Input.GetAxisRaw("Vertical") < -0.5f)
