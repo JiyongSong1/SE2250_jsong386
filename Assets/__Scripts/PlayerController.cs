@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,6 +6,8 @@ public class PlayerController : Arrow
 {
     static public PlayerController S;
     public float moveSpeed;
+
+    public float arrowVelocity = 7.0f;
     
     private Animator anim;
 
@@ -66,7 +68,7 @@ public class PlayerController : Arrow
             if(Input.GetKeyDown(KeyCode.V))
             {
             GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));
-            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2 (Input.GetAxisRaw("Horizontal")*7f ,0f);
+            arrow.GetComponent<Rigidbody2D>().velocity = new Vector2 (Input.GetAxisRaw("Horizontal")*arrowVelocity ,0f);
             //destroy arrow after 7 seconds automatically
             Destroy (arrow, 7.0f);
             }
@@ -96,12 +98,14 @@ public class PlayerController : Arrow
 
         if(count > 5)
         {
-
+            //double move speed of player when count is over 5
+            moveSpeed = 10;
         }
 
         if(count > 10)
         {
-            
+            //double arrow velocity when count is over 14
+            arrowVelocity = 14f;
         }
     }
 }
