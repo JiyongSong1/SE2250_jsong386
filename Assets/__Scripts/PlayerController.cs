@@ -25,7 +25,7 @@ public class PlayerController : Arrow
 
     void Awake()
     {
-        //Singleton
+        //Singleton with exception dealer
         if (S == null)
         {
             S = this;            
@@ -38,6 +38,8 @@ public class PlayerController : Arrow
 
     void Start()
     {
+        //destroys duplicated character and sets animation
+    
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
 

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
+    //declaring variables
     public float moveSpeed;
     private Rigidbody2D myRigidbody;
     private bool moving;

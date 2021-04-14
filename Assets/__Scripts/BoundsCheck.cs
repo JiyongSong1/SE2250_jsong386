@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BoundsCheck : MonoBehaviour
 {
+    //keeps all gameobject within bounds of the map
+    //keeps camrea on the player
 
     void FixedUpdate()
     {

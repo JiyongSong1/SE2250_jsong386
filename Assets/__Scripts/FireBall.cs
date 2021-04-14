@@ -22,16 +22,12 @@ public class FireBall : MonoBehaviour
         Destroy(gameObject, 5f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+    //collision detection
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.name.Equals("Player"))
         {
+            //passes damage to health manager
             col.gameObject.GetComponent<PlayerHealthManager>().damagePlayer(damage);
             Destroy (gameObject);
         }

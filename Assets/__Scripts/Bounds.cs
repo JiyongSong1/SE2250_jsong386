@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class Bounds : MonoBehaviour
 {
-
-    private BoxCollider2D bounds;
+    //declaring variables
+       private BoxCollider2D bounds;
     private CameraController theCamera;
 
 
+    //setting bounard for the house
     void Start()
     {
         bounds = GetComponent<BoxCollider2D>();
