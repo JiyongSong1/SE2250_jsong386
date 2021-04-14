@@ -63,11 +63,7 @@ public class PlayerController : Arrow
             lastMove = new Vector2(Input.GetAxisRaw("Horizontal"), 0f);
 
             //press space to shoot arrows
-<<<<<<< HEAD
             if(Input.GetKeyDown(KeyCode.V))
-=======
-            if(Input.GetKeyDown(KeyCode.Space))
->>>>>>> parent of 90cc61e (Merge branch 'main' of https://github.com/JiyongSong1/SE2250_jsong386 into main)
             {
             GameObject arrow = Instantiate(arrowPrefab, transform.position, Quaternion.Euler(0, 0, 90));
             arrow.GetComponent<Rigidbody2D>().velocity = new Vector2 (Input.GetAxisRaw("Horizontal")*7f ,0f);
