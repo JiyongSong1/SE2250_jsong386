@@ -18,24 +18,32 @@ public class Arrow : MonoBehaviour
         //changed animations
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.U)){
+            count += 10;
+            setCountText();
+        }
+    }
+
+    //collision detection and updates scores
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Enemy")
         {
             Destroy (col.gameObject);
-            count++;
+            count += 1;
             setCountText();
-        }
-
-        if (col.gameObject.tag == "Mage")
+        } else if (col.gameObject.tag == "Mage")
         {
             Destroy (col.gameObject);
-            count = count + 2;
+            count += 2;
             setCountText();
         }
     }
 
-    void setCountText()
+    //sets the test
+    public void setCountText()
     {
         countText.text = "Count: " + count.ToString();
     }

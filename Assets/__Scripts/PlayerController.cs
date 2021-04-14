@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,6 +10,8 @@ public class PlayerController : Arrow
     public float arrowVelocity = 7.0f;
     
     private Animator anim;
+
+    public Arrow arrow1;
 
     private bool playerMoving;
 
@@ -96,13 +98,14 @@ public class PlayerController : Arrow
         anim.SetFloat("LastMoveX", lastMove.x);
         anim.SetFloat("LastMoveY", lastMove.y);
 
-        if(count > 5)
+        
+        if(count > 30)
         {
             //double move speed of player when count is over 5
             moveSpeed = 10;
         }
 
-        if(count > 10)
+        if(count > 50)
         {
             //double arrow velocity when count is over 14
             arrowVelocity = 14f;
