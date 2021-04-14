@@ -7,6 +7,7 @@ public class BoundsCheck : MonoBehaviour
 
     void FixedUpdate()
     {
+        //keep player moving within the screen
         Vector3 pos = Camera.main.WorldToViewportPoint(transform.position);
 
         if (pos.x < 0f) pos.x = 0f;

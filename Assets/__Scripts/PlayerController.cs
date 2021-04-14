@@ -41,6 +41,7 @@ public class PlayerController : Arrow
         anim = GetComponent<Animator>();
         myRigidbody = GetComponent<Rigidbody2D>();
 
+        //check player exists already, and if there is 2 player, then remove one
         if(!playerExists)
         {
             playerExists = true;

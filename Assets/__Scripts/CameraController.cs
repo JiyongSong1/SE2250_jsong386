@@ -21,16 +21,18 @@ public class CameraController : MonoBehaviour
 
     void Start()
     {
-
+        //bound field
         minBounds = boundBox.bounds.min;
         maxBounds = boundBox.bounds.max;
 
+        //bound field with the value of screen size
         theCamera = GetComponent<Camera>();
         halfHeight = theCamera.orthographicSize;
         halfWidth = halfHeight * Screen.width / Screen.height;
 
         DontDestroyOnLoad(transform.gameObject);
 
+        //check camera already exist, and remove duplicate one
         if (!cameraExists)
         {
             cameraExists = true;
@@ -55,6 +57,7 @@ public class CameraController : MonoBehaviour
         transform.position = new Vector3(clampedX, clampedY, transform.position.z);
     }
 
+    //set bound
     public void SetBounds(BoxCollider2D newBounds)
     {
         boundBox = newBounds;

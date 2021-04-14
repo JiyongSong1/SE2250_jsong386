@@ -8,7 +8,7 @@ public class Bounds : MonoBehaviour
     private BoxCollider2D bounds;
     private CameraController theCamera;
 
-
+    //load box collider and set bound
     void Start()
     {
         bounds = GetComponent<BoxCollider2D>();
