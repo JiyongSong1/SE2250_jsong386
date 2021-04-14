@@ -1502,7 +1502,6 @@ GameObject:
   - component: {fileID: 1965071798}
   - component: {fileID: 1965071800}
   - component: {fileID: 1965071801}
-  - component: {fileID: 1965071802}
   m_Layer: 0
   m_Name: Sword
   m_TagString: Untagged
@@ -1608,25 +1607,11 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1965071797}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2ed779b68d01ba54a8ba5f8c44f4f123, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1965071802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1965071797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e64e2658188aae141931ba4044461a1a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countText: {fileID: 0}
-  target: {fileID: 0}
 --- !u!1 &2019899921
 GameObject:
   m_ObjectHideFlags: 0
@@ -1731,6 +1716,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 67d84aca66bfde44b8c1763c1cf2f44e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  count: 0
   countText: {fileID: 0}
   target: {fileID: 0}
   moveSpeed: 5
@@ -1815,6 +1801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d62df658c91940478003ea89f31962e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  count: 0
   countText: {fileID: 25899344}
   target: {fileID: 0}
   moveSpeed: 0
