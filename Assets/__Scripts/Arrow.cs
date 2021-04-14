@@ -31,7 +31,6 @@ public class Arrow : MonoBehaviour
         if (col.gameObject.tag == "Mage")
         {
             Destroy (col.gameObject);
-            Destroy (gameObject);
             count = count + 2;
             setCountText();
         }

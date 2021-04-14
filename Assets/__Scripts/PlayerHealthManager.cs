@@ -8,6 +8,7 @@ public class PlayerHealthManager : MonoBehaviour
     public int playerMaxHp;
     public int playerCurrentHp;
 
+    //refernce health bar 
     public HealthBar healthBar;
 
     //player must start at max health, hence on start, player's current hp is the max hp
