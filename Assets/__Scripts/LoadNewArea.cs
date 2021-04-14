@@ -20,9 +20,11 @@ public class LoadNewArea : MonoBehaviour
         score = Arrow.count;
     }
 
+
+    //player is allowed enter when over 50 points
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(score > 5 && other.gameObject.name == "Player")
+        if(score > 50 && other.gameObject.name == "Player")
         {
             Application.LoadLevel(levelToLoad);
         }
