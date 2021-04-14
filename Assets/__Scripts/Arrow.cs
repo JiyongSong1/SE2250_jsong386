@@ -23,13 +23,15 @@ public class Arrow : MonoBehaviour
         if (col.gameObject.tag == "Enemy")
         {
             Destroy (col.gameObject);
+            Destroy (gameObject);
             count++;
             setCountText();
         }
 
         if (col.gameObject.tag == "Mage")
         {
-            Destroy (col.gameObject);            
+            Destroy (col.gameObject);
+            Destroy (gameObject);
             count = count + 2;
             setCountText();
         }
