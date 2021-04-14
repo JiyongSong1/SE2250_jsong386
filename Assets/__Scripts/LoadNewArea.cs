@@ -6,7 +6,7 @@ public class LoadNewArea : MonoBehaviour
 {
     public string levelToLoad;
 
-    private static int score;
+    private int score;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +22,7 @@ public class LoadNewArea : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(if score > 5 && other.gameObject.name == "Player")
+        if(score > 5 && other.gameObject.name == "Player")
         {
             Application.LoadLevel(levelToLoad);
         }
